@@ -172,44 +172,9 @@ pytest
 cd Front
 npm test
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Qwen AI for the powerful language model
-- FastAPI for the awesome web framework
-- All contributors who helped improve this project
-           "location": "City",
-           "lifestyle": "Target Lifestyle"
-         },
-         "budget_range": "500,000 THB",
-         "campaign_objective": "Your Objective"
-       }"""
-       
-       results = await orchestrator(user_prompt)
-       return results
-   
-   # Run the async function
-   results = asyncio.run(run_campaign())
-   ```
-
 ## Configuration
 
-Make sure to set up your OpenAI API configuration:
-- Update the `base_url` in `qwen_market/services/agents.py` if needed
-- Set any required environment variables
+Set any required environment variables
+- OPENAI_API_KEY
+- OPENAI_BASE_URL
 
-## License
-
-MIT
