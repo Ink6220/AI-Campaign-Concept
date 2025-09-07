@@ -1,0 +1,36 @@
+# Core Dependencies
+fastapi==0.115.7
+uvicorn==0.25.0
+python-multipart==0.0.21
+pydantic==2.11.7
+pydantic_core==2.33.2
+
+# Async & HTTP
+aiohttp==3.10.10
+anyio==4.10.0
+httpx==0.28.1
+httpcore==1.0.9
+
+# AI & ML
+openai==1.106.1
+tqdm==4.67.1
+
+# Utilities
+annotated-types==0.7.0
+certifi==2025.8.3
+distro==1.9.0
+exceptiongroup==1.3.0
+h11==0.16.0
+idna==3.10
+jiter==0.10.0
+sniffio==1.3.1
+typing-inspection==0.4.1
+typing_extensions==4.15.0
+vllm==0.10.1.1
+
+# Development (optional)
+pytest==8.2.2
+pytest-asyncio==0.23.8
+black==24.4.2
+isort==5.13.2
+mypy==1.11.1
