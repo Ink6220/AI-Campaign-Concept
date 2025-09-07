@@ -1,0 +1,8 @@
+INFO:     Will watch for changes in these directories: ['/Users/inkk/Qwen-market/qwen_market']
+ERROR:    [Errno 48] Address already in use
+INFO:     Will watch for changes in these directories: ['/Users/inkk/Qwen-market/qwen_market']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [52935] using StatReload
+ERROR:    Error loading ASGI app. Could not import module "api".
+INFO:     Will watch for changes in these directories: ['/Users/inkk/Qwen-market/qwen_market']
+ERROR:    [Errno 48] Address already in use

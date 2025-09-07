@@ -21,7 +21,6 @@ qwen-market/
 │   ├── requirements.txt   # Server dependencies
 │   └── README.md         # Server documentation
 ├── api.py                 # Main FastAPI application
-├── main.py                # Example usage
 ├── requirements.txt       # Python dependencies
 └── README.md             # This file
 ```
