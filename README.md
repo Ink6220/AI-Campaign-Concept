@@ -16,8 +16,12 @@ qwen-market/
 │   ├── orchestrator.py    # Campaign generation logic
 │   └── services/
 │       └── agents.py      # AI agent implementations
-├── api.py                 # FastAPI application
-├── main.py               # Example usage
+├── custom_server/          # Custom vLLM FastAPI server
+│   ├── main.py           # FastAPI application with vLLM
+│   ├── requirements.txt   # Server dependencies
+│   └── README.md         # Server documentation
+├── api.py                 # Main FastAPI application
+├── main.py                # Example usage
 ├── requirements.txt       # Python dependencies
 └── README.md             # This file
 ```
