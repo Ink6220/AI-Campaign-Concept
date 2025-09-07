@@ -1,0 +1,48 @@
+INFO:     Will watch for changes in these directories: ['/Users/inkk/Qwen-market']
+ERROR:    [Errno 48] Address already in use
+INFO:     Will watch for changes in these directories: ['/Users/inkk/Qwen-market']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [67520] using StatReload
+INFO:     Started server process [67522]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['/Users/inkk/Qwen-market']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [69224] using StatReload
+INFO:     Started server process [69254]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:63465 - "OPTIONS /generate-campaign HTTP/1.1" 200 OK
+INFO:api:Received campaign generation request for ร้านอาหาร
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:api:Processing campaign generation synchronously
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:api:Campaign generation completed successfully
+INFO:     127.0.0.1:63465 - "POST /generate-campaign HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52086 - "OPTIONS /generate-campaign HTTP/1.1" 200 OK
+INFO:api:Received campaign generation request for ฟาสฟูด
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:api:Processing campaign generation synchronously
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://3e636303ae4d.ngrok-free.app/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:api:Campaign generation completed successfully
+INFO:     127.0.0.1:52086 - "POST /generate-campaign HTTP/1.1" 200 OK
