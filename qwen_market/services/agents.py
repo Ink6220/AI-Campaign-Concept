@@ -17,8 +17,8 @@ from ..models import (
 from .. import prompts
 
 client = AsyncOpenAI(
-    api_key=os.getenv("OPENAI_API_KEY", "EMPTY"),
-    base_url=os.getenv("OPENAI_BASE_URL", "https://fe931c1b9bb8.ngrok-free.app/v1")
+    api_key=os.getenv("OPENAI_API_KEY"),
+    base_url=os.getenv("OPENAI_BASE_URL")
 )
 
 async def run_agent(prompt: str, user_prompt: str, schema=None):
