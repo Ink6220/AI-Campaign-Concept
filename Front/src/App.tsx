@@ -153,7 +153,13 @@ function App() {
         try {
           resultData = typeof data.data === 'string' ? JSON.parse(data.data) : data.data;
           console.log('Processed result data:', resultData);
-          setResult(resultData);
+          // Ensure all expected properties exist with default values
+          setResult({
+            big_idea: resultData.big_idea || '',
+            key_messages: Array.isArray(resultData.key_messages) ? resultData.key_messages : [],
+            channels: Array.isArray(resultData.channels) ? resultData.channels : [],
+            kpis: resultData.kpis || {}
+          });
         } catch (e) {
           console.error('Error parsing result data:', e);
           throw new Error('Failed to process campaign data');
@@ -210,21 +216,35 @@ function App() {
         },
         body: JSON.stringify({
           old_campaign: result,
-          client_comment: comment
+          client_comment: comment,
+          modifications: {
+            feedback: comment
+          }
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to regenerate campaign');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.detail || 'Failed to regenerate campaign');
       }
 
       const data = await response.json();
+      console.log('Regeneration response:', data);
+      
       if (data.status === 'success' && data.data) {
-        setResult(data.data);
+        // Parse the response data to ensure it matches the expected format
+        const responseData = typeof data.data === 'string' ? JSON.parse(data.data) : data.data;
+        setResult({
+          big_idea: responseData.big_idea || '',
+          key_messages: Array.isArray(responseData.key_messages) ? responseData.key_messages : [],
+          channels: Array.isArray(responseData.channels) ? responseData.channels : [],
+          kpis: responseData.kpis || {}
+        });
         setComment('');
       }
     } catch (err) {
-      setError('Failed to regenerate campaign. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to regenerate campaign';
+      setError(`Failed to regenerate campaign: ${errorMessage}`);
       console.error('Regeneration error:', err);
     } finally {
       setIsRegenerating(false);
@@ -499,7 +519,7 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-3">💡 Big Idea</h3>
                   <div className="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
-                    <p className="text-gray-800 text-lg">{result.big_idea}</p>
+                    <p className="text-gray-800 text-lg">{result.big_idea || 'No big idea generated yet'}</p>
                   </div>
                 </div>
 
@@ -507,7 +527,7 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">🎯 Key Messages</h3>
                   <div className="space-y-3">
-                    {result.key_messages.map((message, index) => (
+                    {(result.key_messages || []).map((message, index) => (
                       <div key={index} className="bg-gray-50 rounded-lg p-4 border-l-4 border-blue-500">
                         <p className="text-gray-700">{message}</p>
                       </div>
@@ -519,7 +539,7 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">📢 Marketing Channels</h3>
                   <div className="grid gap-3">
-                    {result.channels.map((channel, index) => (
+                    {(result.channels || []).map((channel, index) => (
                       <div key={index} className="bg-green-50 rounded-lg p-4 border border-green-200">
                         <p className="text-gray-700">{channel}</p>
                       </div>
