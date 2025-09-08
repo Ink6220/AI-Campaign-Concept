@@ -47,7 +47,7 @@ def check_rate_limit(client_ip: str):
     return True
 
 # LLM Engine Initialization
-engine = AsyncLLMEngine("marketeam/Qwen-Marketing")
+engine = AsyncLLMEngine("komsan/Qwen-Campaign-Concept")
 
 class GenerationRequest(BaseModel):
     prompt: str
@@ -86,7 +86,7 @@ async def generate_text(request: Request, payload: GenerationRequest):
         return {
             "status": "success",
             "generated_text": generated_text,
-            "model": "marketeam/Qwen-Marketing"
+            "model": "komsan/Qwen-Campaign-Concept"
         }
 
     except Exception as e:
@@ -96,7 +96,7 @@ async def generate_text(request: Request, payload: GenerationRequest):
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
-    return {"status": "healthy", "model": "marketeam/Qwen-Marketing"}
+    return {"status": "healthy", "model": "komsan/Qwen-Campaign-Concept"}
 
 # Shutdown event
 @app.on_event("shutdown")

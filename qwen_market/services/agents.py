@@ -23,7 +23,7 @@ client = AsyncOpenAI(
 
 async def run_agent(prompt: str, user_prompt: str, schema=None):
     response = await client.chat.completions.create(
-        model="marketeam/Qwen-Marketing",
+        model="komsan/Qwen-Campaign-Concept",
         messages=[
             {"role": "system", "content": prompt},
             {"role": "user", "content": user_prompt},

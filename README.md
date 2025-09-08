@@ -44,7 +44,7 @@ qwen-market/
 2. **Set up vLLM Server**
    The vLLM server provides a built-in HTTP API for model inference. Start it with:
    ```bash
-   vllm serve marketeam/Qwen-Marketing --host 0.0.0.0 --port 8080 --max-model-len 4096
+   vllm serve komsan/Qwen-Campaign-Concept --host 0.0.0.0 --port 8080 --max-model-len 4096
    ```
    
    This starts vLLM's built-in server (not FastAPI or Flask) with the following endpoints:
@@ -68,7 +68,7 @@ qwen-market/
    import uvicorn
    
    app = FastAPI()
-   engine = AsyncLLMEngine("marketeam/Qwen-Marketing")
+   engine = AsyncLLMEngine("komsan/Qwen-Campaign-Concept")
    
    @app.post("/generate")
    async def generate(prompt: str):

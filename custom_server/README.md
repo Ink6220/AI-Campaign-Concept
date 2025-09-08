@@ -52,17 +52,17 @@ custom_server/
     {
       "status": "success",
       "generated_text": "[Generated text will appear here]",
-      "model": "marketeam/Qwen-Marketing"
+      "model": "komsan/Qwen-Campaign-Concept"
     }
     ```
 
 ### Health Check
 - **GET** `/health`
   - Check if the server is running
-  - Returns: `{"status": "healthy", "model": "marketeam/Qwen-Marketing"}`
+  - Returns: `{"status": "healthy", "model": "komsan/Qwen-Campaign-Concept"}`
 
 ## Environment Variables
 
 No environment variables are required by default, but you can configure:
-- `MODEL_NAME`: Override the default model (default: "marketeam/Qwen-Marketing")
+- `MODEL_NAME`: Override the default model (default: "komsan/Qwen-Campaign-Concept")
 - `PORT`: Server port (default: 8000)
