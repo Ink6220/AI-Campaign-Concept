@@ -1,6 +1,7 @@
 # 🚀 Qwen Marketing Campaign Generator
 
 A powerful AI-powered marketing campaign generation system built with Python, FastAPI, and Qwen AI. This tool helps you create data-driven marketing campaigns tailored to your business objectives.
+                     <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/8652ec10-ac9f-415c-815d-8378c0057430" />
 
 ## 🏗️ Project Structure
 
